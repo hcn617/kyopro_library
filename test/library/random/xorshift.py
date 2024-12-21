@@ -11,7 +11,7 @@ from library.random.xorshift import Xorshift32, Xorshift64
         23948539,
     ],
 )
-def test_xorshift32_same_seed(seed):
+def test_xorshift32_same_seed(seed: int) -> int:
     rng1 = Xorshift32(seed)
     rng2 = Xorshift32(seed)
     for _ in range(100):
@@ -26,7 +26,7 @@ def test_xorshift32_same_seed(seed):
         7714801932196503346,
     ],
 )
-def test_xorshift64_same_seed(seed):
+def test_xorshift64_same_seed(seed: int) -> int:
     rng1 = Xorshift64(seed)
     rng2 = Xorshift64(seed)
     for _ in range(100):
